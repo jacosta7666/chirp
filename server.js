@@ -10,7 +10,11 @@ var app = express();
 //start express
 var config = require('./lib/config');
 
+//configure express
+require('./lib/express')(app);
 
+// Configure routes
+require('./lib/routes')(app);
 
 app.listen(config.port, function() {
     console.log('running on port ' + config.port);
