@@ -18,6 +18,7 @@ require('./lib/express')(app);
 require('./lib/routes')(app);
 
 app.listen(config.port, function() {
+
     console.log('running on port ' + config.port);
 
 });
